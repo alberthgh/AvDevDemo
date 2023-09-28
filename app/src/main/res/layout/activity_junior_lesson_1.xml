@@ -4,6 +4,7 @@
     android:layout_height="match_parent">
 
     <LinearLayout
+        android:id="@+id/ll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
@@ -41,8 +42,8 @@
 
         <SurfaceView
             android:id="@+id/surface_way_2"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="330dp"
+            android:layout_height="330dp"
             android:layout_marginTop="10dp" />
 
         <TextView
@@ -50,6 +51,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:text="3. 自定义View 绘制图片" />
+
+        <com.albert.avdevdemo.junior.MyDrawBitmapView
+            android:layout_width="330dp"
+            android:layout_height="330dp"
+            android:layout_marginTop="10dp" />
 
     </LinearLayout>
 </ScrollView>
