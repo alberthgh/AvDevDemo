@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="初级入门篇主要是接触Android多媒体展示相关的API，通过单独的列举和使用这些API，对Android音视频处理有一个基本的轮廓，虽然知识点相对来说是比较散的，但是点成线,线称面，基本的基础掌握了，通过学习Android音视频核心的API将音视频的流程串联起来，这样对于音视频的了解和控制就不仅仅局限于最外层的API了，而是能够通过相对底层的方式来加深对Android 音视频开发的认知。 " />
+
+    <TextView
+        android:id="@+id/lesson_1"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/cardview_dark_background"
+        android:gravity="center"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="Android 音视频开发(一) : 通过三种方式绘制图片"
+        android:textColor="@color/white" />
+</LinearLayout>
