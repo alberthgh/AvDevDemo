@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="使用 AudioRecord 采集音频PCM并保存到文件" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="AudioRecord是Android系统提供的用于实现录音的功能类。\n\n\n
+AndioRecord类的主要功能是让各种JAVA应用能够管理音频资源, 以便它们通过此类能够录制声音相关的硬件所收集的声音。" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text=" 在录音过程中，「应用所需要做的」就是通过后面三个类方法中的一个去「及时地获取」AudioRecord对象的录音数据. " />
+
+    <TextView
+        android:id="@+id/btn_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/cardview_dark_background"
+        android:padding="10dp"
+        android:text="录音"
+        android:textColor="@color/white" />
+
+
+    <TextView
+        android:id="@+id/btn_stop_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/cardview_dark_background"
+        android:padding="10dp"
+        android:text="停止录音"
+        android:textColor="@color/white" />
+
+
+    <TextView
+        android:id="@+id/btn_play_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/cardview_dark_background"
+        android:padding="10dp"
+        android:text="播放录音"
+        android:textColor="@color/white" />
+
+</LinearLayout>
