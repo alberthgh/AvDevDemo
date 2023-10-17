@@ -3,13 +3,9 @@ package com.albert.avdevdemo.junior
 import android.Manifest
 import android.annotation.SuppressLint
 import android.content.pm.PackageManager
-import android.media.AudioAttributes
 import android.media.AudioFormat
 import android.media.AudioRecord
-import android.media.MediaPlayer
-import android.media.MediaPlayer.OnPreparedListener
 import android.media.MediaRecorder
-import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
@@ -36,7 +32,6 @@ class Lesson2Activity : AppCompatActivity() {
     private var wav: File? = null
     //播放
 
-    private lateinit var mediaPlayer: MediaPlayer
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityJuniorLesson2Binding.inflate(layoutInflater)
@@ -64,11 +59,6 @@ class Lesson2Activity : AppCompatActivity() {
         binding.btnStopRecord.setOnClickListener {
             isRecording = false
         }
-        binding.btnPlayRecord.setOnClickListener {
-            wav?.let {
-                playMedia(Uri.fromFile(it))
-            }
-        }
     }
 
     override fun onRequestPermissionsResult(
@@ -85,18 +75,18 @@ class Lesson2Activity : AppCompatActivity() {
     @SuppressLint("MissingPermission")
     private fun startRecord() {
         Thread {
-            val p1 = AudioFormat.SAMPLE_RATE_UNSPECIFIED
+            val p1 = 22050
             val p2 = AudioFormat.CHANNEL_IN_STEREO
             val p3 = AudioFormat.ENCODING_PCM_16BIT
-//            bufferSize = AudioRecord.getMinBufferSize(
-//                p1,
-//                p2,
-//                p3
-//            )//参数的东西，文档默认吧
-//            if (bufferSize<0){
-//                Log.d("record","bufferSize < 0")
-//                return@Thread
-//            }
+            bufferSize = AudioRecord.getMinBufferSize(
+                p1,
+                p2,
+                p3
+            )//参数的东西，文档默认吧
+            if (bufferSize < 0) {
+                Log.d("record", "bufferSize _ " + bufferSize)
+                return@Thread
+            }
             buffer = ByteArray(bufferSize)
             audioRecord = AudioRecord(
                 MediaRecorder.AudioSource.MIC,
@@ -150,33 +140,6 @@ class Lesson2Activity : AppCompatActivity() {
 
 
     private fun initAudioRecord() {
-    }
-
-    fun playMedia(uri: Uri) {
-        mediaPlayer = MediaPlayer.create(this, uri).apply {
-            setAudioAttributes(
-                AudioAttributes.Builder()
-                    .setUsage(AudioAttributes.USAGE_MEDIA)
-                    .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
-                    .build()
-            )
-            try {
-                //change with setDataSource(Context,Uri);
-                mediaPlayer.setDataSource(this@Lesson2Activity, uri)
-                mediaPlayer.prepareAsync()
-                mediaPlayer.setOnPreparedListener(OnPreparedListener { //mp.start();
-                    mediaPlayer.start()
-                })
-            } catch (e: IllegalArgumentException) {
-                e.printStackTrace()
-            } catch (e: IllegalStateException) {
-                e.printStackTrace()
-            } catch (e: IOException) {
-                e.printStackTrace()
-            } catch (e: Exception) {
-                e.printStackTrace()
-            }
-        }
     }
 
     override fun onDestroy() {
