@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.albert.avdevdemo.databinding.ActivityJuniorBinding
 import com.albert.avdevdemo.junior.Lesson1Activity
 import com.albert.avdevdemo.junior.Lesson2Activity
+import com.albert.avdevdemo.junior.Lesson3Activity
 
 class JuniorActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,6 +18,9 @@ class JuniorActivity : AppCompatActivity() {
         }
         binding.lesson2.setOnClickListener {
             startActivity(Intent(this, Lesson2Activity::class.java))
+        }
+        binding.lesson3.setOnClickListener {
+            startActivity(Intent(this, Lesson3Activity::class.java))
         }
     }
 }

@@ -31,6 +31,7 @@
         <activity android:name=".JuniorActivity" />
         <activity android:name=".junior.Lesson1Activity" />
         <activity android:name=".junior.Lesson2Activity" />
+        <activity android:name=".junior.Lesson3Activity" />
     </application>
 
 </manifest>

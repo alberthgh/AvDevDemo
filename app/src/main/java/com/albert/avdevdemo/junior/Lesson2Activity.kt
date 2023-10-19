@@ -75,7 +75,7 @@ class Lesson2Activity : AppCompatActivity() {
     @SuppressLint("MissingPermission")
     private fun startRecord() {
         Thread {
-            val p1 = 22050
+            val p1 = 44100
             val p2 = AudioFormat.CHANNEL_IN_STEREO
             val p3 = AudioFormat.ENCODING_PCM_16BIT
             bufferSize = AudioRecord.getMinBufferSize(
