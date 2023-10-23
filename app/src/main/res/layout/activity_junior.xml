@@ -46,4 +46,16 @@
         android:paddingEnd="20dp"
         android:text="(三)：使用 AudioTrack 播放PCM音频"
         android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/lesson_4"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/cardview_dark_background"
+        android:gravity="center"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="(四)：使用 Camera API 采集视频数据 "
+        android:textColor="@color/white" />
 </LinearLayout>

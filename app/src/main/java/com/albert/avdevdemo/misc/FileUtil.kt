@@ -21,6 +21,18 @@ class FileUtil {
             File(PATH + "/" + subPath).createNewFile()
         }
 
+        fun createDefaultDir(context: Context) {
+            // 获取当前包名的files路径：/data/user/0/com.exa.myapplication
+            //"data/data/com.exa.myapplication/"
+            val PATH = context.dataDir.absolutePath + "/" + DEFAULT_PATH
+            val file = File(PATH)
+            if (!file.exists()) {
+                if (!file.mkdirs()) {
+//                    Log.e(TAG, "create directory failed.")
+                }
+            }
+        }
+
         //不带"/"开头
         fun getDefaultPath(context: Context): String {
             return context.dataDir.absolutePath + "/" + DEFAULT_PATH

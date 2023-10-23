@@ -7,6 +7,7 @@ import com.albert.avdevdemo.databinding.ActivityJuniorBinding
 import com.albert.avdevdemo.junior.Lesson1Activity
 import com.albert.avdevdemo.junior.Lesson2Activity
 import com.albert.avdevdemo.junior.Lesson3Activity
+import com.albert.avdevdemo.junior.Lesson4Activity
 
 class JuniorActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,6 +22,9 @@ class JuniorActivity : AppCompatActivity() {
         }
         binding.lesson3.setOnClickListener {
             startActivity(Intent(this, Lesson3Activity::class.java))
+        }
+        binding.lesson4.setOnClickListener {
+            startActivity(Intent(this, Lesson4Activity::class.java))
         }
     }
 }
