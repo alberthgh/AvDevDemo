@@ -56,6 +56,18 @@
         android:gravity="center"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
-        android:text="(四)：使用 Camera API 采集视频数据 "
+        android:text="(四)：用新的CameraX库 "
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/lesson_5"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/cardview_dark_background"
+        android:gravity="center"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="(五)：用新的Camera2 "
         android:textColor="@color/white" />
 </LinearLayout>

@@ -8,6 +8,7 @@ import com.albert.avdevdemo.junior.Lesson1Activity
 import com.albert.avdevdemo.junior.Lesson2Activity
 import com.albert.avdevdemo.junior.Lesson3Activity
 import com.albert.avdevdemo.junior.Lesson4Activity
+import com.albert.avdevdemo.junior.Lesson5Activity
 
 class JuniorActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,6 +26,9 @@ class JuniorActivity : AppCompatActivity() {
         }
         binding.lesson4.setOnClickListener {
             startActivity(Intent(this, Lesson4Activity::class.java))
+        }
+        binding.lesson5.setOnClickListener {
+            startActivity(Intent(this, Lesson5Activity::class.java))
         }
     }
 }
